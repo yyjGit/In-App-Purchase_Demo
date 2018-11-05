@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 
+/** 获取产品信息错误码 */
+typedef NS_ENUM(NSInteger, IAPFetchProductInfoErrorCode) {
+    
+    // 产品IDs为空（IDs.count == 0）
+    IAPFetchProductInfoErrorNoProductIDs = 0,
+    
+    // 获取产品信息失败(request:didFailWithError:)
+    IAPFetchProductInfoErrorFetchProductInfoFailed,
+    
+    // 没有产品信息(response.products.count == 0)
+    IAPFetchProductInfoErrorNoProductInfo
+};
+
 /** 获取产品信息接收者 */
 @protocol IAPManagerProductInfoReceiver <NSObject>
 @required
@@ -40,6 +53,15 @@
  */
 + (IAPManager *)shared;
 
+/**
+ 开启监听
+ */
+- (void)startObserver;
+
+/**
+ 停止监听
+ */
+- (void)stopObserver;
 
 /**
  根据productIDs 向 app store 获取产品信息

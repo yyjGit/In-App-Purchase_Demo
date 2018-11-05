@@ -30,16 +30,31 @@
     // loading productIDs
     
     // 2、根据App Server 返回的productIDs，向App Store获取产品信息
+    [[IAPManager shared] setProductInfoReceiver:self];
+    [[IAPManager shared] fetchProductsInfoWithProductIDs:self.productIDs];
 }
 
+#pragma mark - IAPManagerProductInfoReceiver
+- (void)fetchProductInfoSuccess:(NSArray<SKProduct *> *)products
+{
+    if (products.count) {
+        self.products = products;
+        [self displayProductsUI];
+    } else {
+        NSLog(@"产品信息为空");
+    }
+}
 
+- (void)fetchProductInfofailed:(NSError *)error
+{
+    NSLog(@"获取产品信息失败：%@", error.domain);
+}
 
 #pragma mark - private memthdos
 - (void)displayProductsUI
 {
     
 }
-
 
 #pragma mark - getters
 - (NSArray <NSString *>*)productIDs
@@ -56,9 +71,5 @@
     }
     return _productIDs;
 }
-
-
-
-
 
 @end
