@@ -13,6 +13,7 @@
 		D93D284B21902DDF0063BF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93D284A21902DDF0063BF61 /* Assets.xcassets */; };
 		D93D284E21902DDF0063BF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93D284C21902DDF0063BF61 /* LaunchScreen.storyboard */; };
 		D93D285121902DDF0063BF61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D93D285021902DDF0063BF61 /* main.m */; };
+		D9465C52219129C300C10C9E /* IAPReceiptVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D9465C51219129C300C10C9E /* IAPReceiptVerifier.m */; };
 		D956868E2190455900CD417C /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D956868D2190455900CD417C /* IAPManager.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		D93D284D21902DDF0063BF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D93D284F21902DDF0063BF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93D285021902DDF0063BF61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9465C50219129C300C10C9E /* IAPReceiptVerifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPReceiptVerifier.h; sourceTree = "<group>"; };
+		D9465C51219129C300C10C9E /* IAPReceiptVerifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPReceiptVerifier.m; sourceTree = "<group>"; };
 		D956868C2190455900CD417C /* IAPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
 		D956868D2190455900CD417C /* IAPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +83,8 @@
 			children = (
 				D956868C2190455900CD417C /* IAPManager.h */,
 				D956868D2190455900CD417C /* IAPManager.m */,
+				D9465C50219129C300C10C9E /* IAPReceiptVerifier.h */,
+				D9465C51219129C300C10C9E /* IAPReceiptVerifier.m */,
 			);
 			path = IAPManager;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				D956868E2190455900CD417C /* IAPManager.m in Sources */,
 				D93D284621902DDF0063BF61 /* ViewController.m in Sources */,
 				D93D285121902DDF0063BF61 /* main.m in Sources */,
+				D9465C52219129C300C10C9E /* IAPReceiptVerifier.m in Sources */,
 				D93D284321902DDF0063BF61 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
